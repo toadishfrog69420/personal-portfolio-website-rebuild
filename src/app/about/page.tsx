@@ -18,7 +18,9 @@ export default function Page() {
                 <div className={`my-8 flex justify-center flex-col`}>
                     <Experience />
                 </div>
-                <Skill />
+                <div className={`my-8 flex justifiy-center flex-col`}>
+                    <Skill />
+                </div>
             </section>
 
         </section>
