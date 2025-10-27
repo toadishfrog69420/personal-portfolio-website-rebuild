@@ -6,21 +6,21 @@ import { Skill } from "./components/skills";
 
 export default function Page() {
     return (
-        <section className="antialiased max-w-6xl mx-2 mt-8 lg:mx-auto flex-auto min-w-0 mt-6 flex flex-col lg:px-4 px-2">
-        
-            <section>
+        <section className="antialiased flex-auto min-w-0 mt-6 flex flex-col lg:px-4 px-2">
+
+            <section className="justify-center">
                 <div className={`my-8 flex justify-center flex-col`}>
-                    <Summary/>
+                    <Summary />
                 </div>
                 <div className={`my-8 flex justify-center flex-col`}>
-                    <Education/>
+                    <Education />
                 </div>
                 <div className={`my-8 flex justify-center flex-col`}>
-                    <Experience/>
+                    <Experience />
                 </div>
-                    <Skill />
+                <Skill />
             </section>
-  
-    </section>
+
+        </section>
     )
 }

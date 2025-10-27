@@ -1,10 +1,8 @@
-'use client'
 import education from '@/app/data/education.json';
 import { CardSpotlight } from '@/app/components/ui/card-spotlight';
-import { useRef } from 'react';
-import { useIsVisible } from '@/app/components/util/is-visible';
 import Link from 'next/link';
 import { Icon_CalendarIcon, Icon_LocationIcon } from '@/app/components/ui/icons';
+import { TransitionSection } from '@/app/components/ui/transition-section';
 
 interface Education {
     school: string;
@@ -20,12 +18,12 @@ interface Education {
 
 export function Education() {
 
-    const refAll = useRef(null);
-    const isVisibleComp = useIsVisible(refAll);
-
     const educationData = (education as Education[]).map((edu, index) => (
-        <CardSpotlight key={index}>
-            <div className='w-full p-4 flex flex-col justify-between'>
+        <CardSpotlight
+            key={index}
+        >
+
+            <div className='lg:w-1/2 w-full p-4 flex flex-col justify-between'>
                 {/* School Name */}
                 <h1 className="text-center font-bold text-2xl mb-2 lg:mb-0 lg:mt-0 text-neutral-400 dark:text-neutral-100">
                     <Link href={edu.slug} target="_blank">
@@ -68,16 +66,11 @@ export function Education() {
     ));
 
     return (
-        <section ref={refAll}
-            className={`flex flex-row justify-center w-full
-        transition-opactiy ease-in duration-700 ${isVisibleComp ? "opacity-100" : "opacity-0"}
-        `}>
-            <div className="containter lg:mx-auto space-y-6 justify-center w-full ">
-                <h1 className='font-bond text-3xl text-left mb-4 mt-4'>
-                    Education
-                </h1>
-                {educationData}
-            </div>
-        </section>
+        <TransitionSection>
+            <h1 className='component-section-header'>
+                Education
+            </h1>
+            {educationData}
+        </TransitionSection>
     )
 }
