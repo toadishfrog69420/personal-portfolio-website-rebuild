@@ -2,7 +2,7 @@
 import experience from '@/app/data/experience.json';
 import { Timeline } from '@/app/components/ui/timeline';
 import { useRef } from 'react';
-import { useIsVisible } from '@/app/components/util/isVisible';
+import { useIsVisible } from '@/app/components/util/is-visible';
 
 interface Experience {
   title: string;

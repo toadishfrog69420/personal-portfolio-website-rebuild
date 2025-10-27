@@ -1,17 +1,19 @@
 'use client'
-import aboutMe from "@/app/data/aboutMe.json"
-import {useRef, useState} from "react"
-import { useIsVisible } from "@/app/components/util/isVisible"
+import aboutMe from "@/app/data/about-me.json"
+import { useRef } from "react"
+import { useIsVisible } from "@/app/components/util/is-visible"
 import { PixelatedCanvas } from "@/app/components/ui/pixelated-canvas"
 
 interface Summary {
-
+    en: string;
 }
 
 export function Summary() {
 
     const refAll = useRef(null);
     const isVisibleComp = useIsVisible(refAll);
+    const summary: Summary[] = aboutMe;
+
 
     return (
         <section ref={refAll}
@@ -23,6 +25,12 @@ export function Summary() {
                     <PixelatedCanvas 
                         src={"/profile/profile-pic-1.png"}
                     />
+            </div>
+            <div className="mb-4">
+                {/* Summary */}
+                <p className="text-base md:text-lg lg:text-xl xl:text-2xl">
+                    {summary[0].en}
+                </p>
             </div>
         </section>
     )

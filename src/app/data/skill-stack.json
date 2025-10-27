@@ -1,0 +1,95 @@
+[
+    {
+        "name":"Python",
+        "icon":"",
+        "items":[
+            {
+                "name":"SKU Request Processor",
+                "description": "Automatic data processor via Streamlit",
+                "slug":"https://github.com/sean-yang-thrasio/sku-request-processor"
+            },
+            {
+                "name":"PNG Color Changer",
+                "description":"Change a color of a PNG file quickly",
+                "slug":"https://logo-color-changer-tdfg.streamlit.app/"
+            },
+            {
+                "name":"Clipboard to PNG",
+                "description":"Quickly save snapshots from Windows snip tool as PNG.",
+                "slug":"https://github.com/toadishfrog69420/clipboard-image-to-png"
+            }
+        ],
+        "tags":["Automation", "Streamlit", "Routines", "Gadgets"]
+    },
+    {
+        "name":"JavaScript",
+        "icon":"",
+        "items":[
+            {
+                "name":"Google Sheet Data Consolidation",
+                "description":"Automatic conslidation of data from multiple Googel Sheets into a single, unified spreadsheet.",
+                "slug":"https://github.com/sean-yang-thrasio/index/blob/main/Resources/google-appscripts/data-consolidation/README.md"
+            },
+            {
+                "name":"Google Sheet Email Scrapper",
+                "description":"Automatic email scrapping, extracting data from CSV attachments, applying flexible filtering, and appending the processed data to a Google Sheet.",
+                "slug":"https://github.com/sean-yang-thrasio/index/blob/main/Resources/google-appscripts/email-scrapper/README.md"
+            },
+            {
+                "name":"Google Sheet Generate Summary Table",
+                "description":"Automatic create pivot table but with configurable grouping and aggregation rules.",
+                "slug":"https://github.com/sean-yang-thrasio/index/blob/main/Resources/google-appscripts/generate-summary-table/README.md"
+            },
+            {
+                "name":"Sheet Cleaner",
+                "description":"Automatic Data cleaning within Google Sheet.",
+                "slug":"https://github.com/sean-yang-thrasio/index/blob/main/Resources/google-appscripts/sheet-cleaner/README.md"
+            },
+            {
+                "name": "2048",
+                "description":"Browser based 2048 Game",
+                "slug":"https://github.com/toadishfrog69420/2048"
+            }
+        ],
+        "tags":["Google Apps Scripts", "Automation", "Routines"]
+    },
+    {
+        "name":"React",
+        "icon":"",
+        "items":[
+            {
+                "name":"Personal Portfolio",
+                "desciription":"Personal Portfolio Website via",
+                "slug":"yxyang.info"
+            }
+        ],
+        "tags":["Tailwind CSS", "Front End", "Next.js"]
+    },
+    {
+        "name":"R",
+        "icon":"",
+        "items":[
+            {
+                "name":"Forecast Steam Server Usage with Time Series",
+                "desciription":"STAT485 - Applied Time Series Analysis",
+                "slug":"https://github.com/toadishfrog69420/timeseries-steam-server-usage-forcast"
+            },
+            {
+                "name":"Mars Alogrithm",
+                "desciription":"Create a Multivariate Adaptive Regression Splines Alogrithm R Library",
+                "slug":"https://github.com/toadishfrog69420/mars-algorithm"
+            }
+        ]
+    },
+    {
+        "name":"NetSuite",
+        "icon":"",
+        "items":[
+            {
+                "name":"Thrasio - Master Data Rebuild",
+                "desciription":"Create Item Hierarchy Strucutres in NetSuite",
+                "slug":"https://github.com/sean-yang-thrasio/index/blob/main/project/2025-05-master-data-rebuild-2025/docs/netsuite-implementation-plan.md"
+            }
+        ]
+    }
+]

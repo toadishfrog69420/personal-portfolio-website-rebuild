@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import { Icon_CollapseIcon, Icon_CrossIcon } from '@/app/components/ui/icons'
-import { useIsVisible } from '@/app/components/util/isVisible'
+import { useIsVisible } from '@/app/components/util/is-visible'
 
 const navItems = {
   '/': {

@@ -2,7 +2,7 @@
 import education from '@/app/data/education.json';
 import { CardSpotlight } from '@/app/components/ui/card-spotlight';
 import { useRef } from 'react';
-import { useIsVisible } from '@/app/components/util/isVisible';
+import { useIsVisible } from '@/app/components/util/is-visible';
 import Link from 'next/link';
 import { Icon_CalendarIcon, Icon_LocationIcon } from '@/app/components/ui/icons';
 
