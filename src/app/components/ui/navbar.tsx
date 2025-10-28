@@ -17,7 +17,7 @@ const navItems = {
   '/video': {
     name: 'video'
   },
-  '/aboutme': {
+  '/about': {
     name: 'about'
   },
 }

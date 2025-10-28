@@ -23,6 +23,7 @@ export function Summary() {
                     width={170}
                     height={170}
                     cellSize={4}
+                    className="bg-white dark:bg-black"
                 />
             </div>
 

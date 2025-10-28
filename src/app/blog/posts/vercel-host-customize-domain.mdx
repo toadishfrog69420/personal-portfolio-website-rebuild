@@ -1,0 +1,145 @@
+---
+title: 'Host Website on Vercel with a Namecheap domain 2024'
+publishedAt: '2024-05-17'
+summary: 'How to add your domain from Namecheap to your Vercel deployment'
+cover: '/post-image/namecheap-vercel.png'
+tag: 'Tech'
+---
+
+## Background
+Vercel deployment is very easy to use, and you also get a free domain for the deployment.
+
+But let's say if you want a customized domain for your project. How do you do it with Vercel?
+
+This blog will cover the how-tos in small steps. With the simplest instructions as possible. 
+
+Credit to: <span className="font-bold text-emerald-500 dark:text-pink-500">[Bryam Loaiza](https://www.youtube.com/@balt1794)</span>
+with this video <span className="font-bold text-emerald-500 dark:text-pink-500">[tutorial](https://www.youtube.com/watch?v=lmvKF_nxdhE)</span>. 
+
+## Steps 
+
+#### - Navigate to the 'Settings' in your project.
+
+<div style={{ textAlign: 'center' }}>
+    <img src="https://cdn.jsdelivr.net/gh/xya89/picx-images-hosting@master/posts/vercel-host-customize-domain/step-1.1e8ghbduvv.webp" 
+    alt="table" 
+    height="500"
+    width="900"
+    style={{ display: 'block', margin: '0 auto' }} />
+</div>
+
+#### - Click 'Domains' in the LHS bar. 
+<div style={{ textAlign: 'center' }}>
+    <img src="https://cdn.jsdelivr.net/gh/xya89/picx-images-hosting@master/posts/vercel-host-customize-domain/step-2.6t6yzngboi.webp" 
+    alt="table" 
+    height="500"
+    width="900"
+    style={{ display: 'block', margin: '0 auto' }} />
+</div>
+
+<br/>
+#### - Inside the input box, enter your domain, for example "hello-test.ca".
+<div style={{ textAlign: 'center' }}>
+    <img src="https://cdn.jsdelivr.net/gh/xya89/picx-images-hosting@master/posts/vercel-host-customize-domain/step-3.969lguym5g.webp" 
+    alt="table" 
+    height="500"
+    width="900"
+    style={{ display: 'block', margin: '0 auto' }} />
+</div>
+
+<br/>
+#### - Then click <span className="bg-gray-100 rounded-lg text-md text-black px-2 py-2">Add</span>.
+<div style={{ textAlign: 'center' }}>
+    <img src="https://cdn.jsdelivr.net/gh/xya89/picx-images-hosting@master/posts/vercel-host-customize-domain/step-4.2ruzl9ksyg.webp" 
+    alt="table" 
+    height="500"
+    width="900"
+    style={{ display: 'block', margin: '0 auto' }} />
+</div>
+Note: 
+
+- It does not really matter which option you choose, you can go with the <span className="rounded-xl text-sm bg-blue-700 px-3 py-0.5 text-white">Recommended</span>. 
+
+- 'Redirect' here means how you want your domain looks like in the browser. 
+
+- For example, <span className="text-sm bg-neutral-50 dark:bg-neutral-700 px-3 text-neutral-700 dark:text-neutral-300">'www.hello-test.ca'</span> or <span className="text-sm bg-neutral-50 dark:bg-neutral-700 px-3 text-neutral-700 dark:text-neutral-300">'hello-test.ca'</span>
+
+#### - After adding the domain, you will probably see the following: 
+<div style={{ textAlign: 'center' }}>
+    <img src="https://cdn.jsdelivr.net/gh/xya89/picx-images-hosting@master/posts/vercel-host-customize-domain/step-5.32htefajz5.webp" 
+    alt="table" 
+    height="500"
+    width="900"
+    style={{ display: 'block', margin: '0 auto' }} />
+</div>
+
+#### - Navigate to 'Nameservers'
+<div style={{ textAlign: 'center' }}>
+    <img src="https://cdn.jsdelivr.net/gh/xya89/picx-images-hosting@master/posts/vercel-host-customize-domain/step-6.9nzn5gkb7f.webp" 
+    alt="table" 
+    height="500"
+    width="900"
+    style={{ display: 'block', margin: '0 auto' }} />
+</div>
+
+Note: 
+
+You might see an button <span className="bg-slate-200 rounded-xl text-sm border-1 border-black text-black px-2">Enable Nameservers </span>, click that and you should see the following: 
+```
+ns1.vercel-dns.com
+ns2.vercel-dns.com
+```
+Copy this into the clipboard by selecting and press <span className="rounded-lg text-sm text-gray-300 dark:bg-neutral-700 bg-neutral-200 px-1">`ctrl+c`</span>
+
+#### - Then go to <span className="font-bold text-emerald-500 dark:text-pink-500">[Namecheap](https://www.namecheap.com/)</span>, goto your Account/Domain List
+<div style={{ textAlign: 'center' }}>
+    <img src="https://cdn.jsdelivr.net/gh/xya89/picx-images-hosting@master/posts/vercel-host-customize-domain/step-7.5c0txxbpf1.webp" 
+    alt="table" 
+    height="500"
+    width="900"
+    style={{ display: 'block', margin: '0 auto' }} />
+</div>
+
+#### - Click <span className="rounded-lg border-1 border-black bg-neutral-100 text-gray-800 px-2 py-1 text-sm">MANAGE</span>
+- Under "Domain", locate the <span className="bg-gray-200 rounded-xl text-sm border-1 border-black text-black px-2">NAMESERVER</span> tag.
+
+- Select the <span className="text-teal-600">Custom DNS</span> in the dropdown menu.
+
+- Paste the copied text here, each line at a time.
+
+- It should look like the following once finished: 
+
+<div style={{ textAlign: 'center' }}>
+    <img src="https://cdn.jsdelivr.net/gh/xya89/picx-images-hosting@master/posts/vercel-host-customize-domain/step-8.esd4330ew.webp" 
+    alt="table" 
+    height="500"
+    width="900"
+    style={{ display: 'block', margin: '0 auto' }} />
+</div>
+
+Then click the green checkmark on the right once finished.
+
+#### - Once finished and saved, you should see a message from Namecheap like this: 
+<div style={{ textAlign: 'center' }}>
+    <img src="https://cdn.jsdelivr.net/gh/xya89/picx-images-hosting@master/posts/vercel-host-customize-domain/step-9.4uas9dgrh0.webp" 
+    alt="table" 
+    height="500"
+    width="900"
+    style={{ display: 'block', margin: '0 auto' }} />
+</div>
+
+So basically you are done!
+
+#### - After some time go back to your Vercel deployment's Domain and Click <span className="rounded-lg border-1 border-black bg-gray-100 text-gray-800 px-2 py-1 text-sm">REFRESH</span>
+It might take some time for the domain to get propogated,<br/>
+You can check if the domain is up and running by using some DNS checker tool, like <span className="font-bold text-emerald-500 dark:text-pink-500">[DNS Checker](https://dnschecker.org/)</span>
+
+#### - Once deployed, you can check if you have access to your website using the domain.
+You can do this using your phone's celluar network. Or you can restart your router and check on your computer.
+
+That's pretty much how you add your domain to your vercel deployment, using Vercel's DNS. 
+
+Thank you for reading and hopefully this saves you some time. 
+
+
+

@@ -50,3 +50,60 @@ body {
 .component-section-header {
   @apply font-bold text-3xl text-left mb-4 mt-4
 }
+
+.component-page-header {
+  @apply font-semibold text-2xl mb-8 mt-20 tracking-tighter 
+  bg-gradient-to-b text-transparent bg-clip-text 
+  from-zinc-900 via-zinc-800 to-stone-500
+  dark:from-zinc-300 dark:via-zinc-200 dark:to-stone-500
+}
+
+/* Blog Styles - Custom definition */
+.blog-section {
+  @apply antialiased max-w-6xl mx-2 mt-8 lg:mx-auto flex-auto min-w-0 mt-6 flex flex-col px-2
+}
+
+.blog-container-div {
+  @apply lg:mx-auto w-full bg-white dark:bg-neutral-800 rounded-lg shadow-md break-words
+}
+
+.blog-title {
+  @apply font-semibold text-2xl tracking-tighter
+}
+
+.blog-date-div {
+  @apply flex justify-between items-center mt-2 mb-8 text-sm
+}
+.blog-date-p{
+  @apply text-sm text-neutral-600 dark:text-neutral-400
+}
+
+.blog-summary {
+  @apply flex justify-between items-center mt-2 mb-8 text-xl tracking-tighter break-normal
+}
+
+.blog-article {
+  @apply break-normal
+}
+
+/*  Blog Post Page Styles - Custom definition */
+.blog-post-card-container {
+  @apply bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden w-full 
+            transition ease-in-out delay-10 hover:-translate-y-1 hover:scale-101 duration-300
+}
+
+.blog-post-card-date-p {
+  @apply text-neutral-600 dark:text-neutral-400 mb-2 w-full
+}
+
+.blog-post-card-title-p {
+  @apply font-semibold text-xl text-neutral-900 dark:text-neutral-100 mb-2 w-full
+}
+
+.blog-post-card-summary-p {
+  @apply text-base text-gray-700 dark:text-gray-300 mb-4 w-full truncate
+}
+
+.blog-post-card-readMore-p {
+  @apply text-blue-500 dark:text-red-500 hover:underline w-full
+}

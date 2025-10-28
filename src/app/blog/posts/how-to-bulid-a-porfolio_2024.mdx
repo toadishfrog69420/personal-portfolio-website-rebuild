@@ -1,0 +1,104 @@
+---
+title: '2024年如何从‘零’搭建个人网站'
+publishedAt: '2024-06-07'
+summary: '一些架设本网站的技术总结'
+cover: '/post-image/porfolio-summary-2024.png'
+tag: 'Tech'
+---
+## 背景
+自从大三开始,我就萌生了搭建个人网站的想法，并进行了尝试。在这之前，我只知道Markdown可以看成HTML的子集，平日里也只会在R Markdown里写报告交作业，除此之外对网页设计还就那个一无所知。
+
+大三暑假，我开始尝试从零构建一个属于自己的网站，<span className="relative group"><span className="bg-black text-black group-hover:text-white transition-colors duration-300">但是因为种种原因中道崩殂了</span><span className="absolute top-0 transform translate-x-20 -translate-y-10 left-0 bg-yellow-300 text-black hidden group-hover:block pointer-events-none z-10">你知道的太多了</span></span>。
+直到最近一些机缘巧合，我有了时间开始每日25小时高强度网上冲浪，看着各座强者做出的劲，霸，强的网站，自己尝试搭建的想法又浮出水面。
+于是我开始研究当下的流行的技术。
+
+在工作中耳濡目染，我了解到如今市面上有许多低代码甚至无代码（codeless）的网页编辑器，例如Wordpress、Wix、Squarespace等。这些平台提供一站式网站建设到部署的服务。
+这些服务功能强大，可以让用户无需写一行代码，快速上线一个精美的现代网站。不过，在我看来，这些并不是长期的解决方案。纠结于平台和服务只是因为我不懂前端技术；于是，我决心开始学习前端技术，用更灵活的工具和框架制作一个真正属于我自己的网页。
+这就好比煮一碗排骨面，我大可以在超市购买现成的蒜蓉排骨熟食、蔬菜和速食面快速做出一碗美味的小吃，但是我的目标是从购买生肉、研究配料开始,从头做一碗属于自己的味道的排骨面。<span className="relative group"><span className="bg-black text-black group-hover:text-white transition-colors duration-300">我老想吃排骨了，最近特别想吃排骨，可惜排骨太贵了</span><span className="absolute top-0 transform translate-x-10 -translate-y-10 left-0 bg-yellow-300 text-black hidden group-hover:block pointer-events-none z-10">后面忘了</span></span>
+
+那么要如何开始呢？通过查阅资料，我了解到现成的JS或TS框架（如React、Vue等）。这些框架使得代码模块化、组件化，使开发、设计和维护更加便捷，也提供了更多的可编程性。我最终选择了<span className="font-bold text-emerald-500 dark:text-pink-500">[NextJs](https://nextjs.org/docs)</span>，
+一个基于React的脚手架。对于静态网站来说，其原理是在构建时预渲染页面，并生成静态HTML文件，这些文件可以直接部署在静态文件服务器上，从而提高性能和安全性。NextJS技能提供现代单页应用的用户体验，
+也能优化SEO和性能，是一个灵活且强大的脚手架。
+
+## 技术栈
+#### Typescript
+方便，味大，无需多盐。
+#### NextJs 
+注意:本文撰写时NextJs版本为v18.17，本站使用App Router features；<span className="font-bold text-emerald-500 dark:text-pink-500">[官方文档](https://nextjs.org/docs/app/building-your-application/routing)</span>
+
+基本要点如下：
+1. app为应用的根目录，每一个页面都由其对应的子目录下的Page.tsx实现。
+2. 可以有多个\<Layout\>组件供不同页面使用，但是必须有一个全局的\<Layout\>组件。<span className="font-bold text-emerald-500 dark:text-pink-500">[如此帖](https://stackoverflow.com/questions/75970151/is-there-a-way-to-prevent-a-root-layout-component-from-being-shown-in-some-neste)</span>
+3. app下的组件为server组件，但是可以通过‘use client’来使得组件变为client组件。
+
+#### CSS 
+NextJs本身不自带CSS框架，所以需要选择一个CSS框架。我对CSS不甚了解，但是直觉上的需求如下：
+1. 兼容响应式处理
+2. 纯CSS，不与React的逻辑冲突
+3. 写起来方便，有丰富的技术文档支持
+
+根据这些限制我选择了<span className="font-bold text-emerald-500 dark:text-pink-500">[TailwindCSS](https://tailwindcss.com/)</span>，其简介的界面和直球的逻辑在我进入官网时就被深深吸引。Tailwindcss兼容响应式，本身轻量化，而且具备大量的官方技术文档支持。
+
+#### Markup
+看了一圈NextJs的官方素材库，很多blog里的文章都是用MDX语言编写的，查询资料后获知MDX可以理解为在markdown的基础上加入JSX，可以在文章写作过程中加入想要的JSX组件，例如：
+```
+<span>
+ content
+</span>
+```
+#### API
+目前使用到的API为<span className="font-bold text-emerald-500 dark:text-pink-500">[Cloudinary](https://cloudinary.com/)</span>的视频播放器API，Cloudinary作为一款十分强劲的CMS，在图片和视频处理方面有各种劲强、霸强的功能，以至于目前使用github page作为CMS的我在初步了解后
+不禁觉得“嚯嚯嚯嚯，夸脏哦”, 但是Cloudinary强劲的功能需要付费，对应package也是相对昂贵的，<del>求一百万影子国币赞助</del>。 
+
+## 搭建
+#### 组件
+首先在脑图工具中写下设计思路，需要哪些页面，页面内又需要哪些功能。这样在实际开发中就不会因为突发奇想去做一个新的页面而丢下手头上的事情。
+<div style={{ textAlign: 'center' }}>
+    <img src="https://cdn.jsdelivr.net/gh/xya89/picx-images-hosting@master/posts/how_to_build_website_2024/brainstorm.1aouc8ljr5.webp" 
+    alt="table" 
+    height="400"
+    width="600"
+    style={{ display: 'block', margin: '0 auto' }} />
+</div>
+
+然后编写\<Header\> \<Footer\>等基本组件，然后拼装成一个\<Layout\>用于所有页面。
+
+再者根据脑图的规划来具体实现页面。
+#### 页面
+目前页面共有首页、关于、文章、照片、视频。慢慢写就完事了。
+值得一提的是：
+1. 文章中关于MDX的渲染方法\blog\utils.ts 使用了NextJs官方素材库中blog的使用方法。<span className="font-bold text-emerald-500 dark:text-pink-500">[链接](https://github.com/vercel/examples/blob/main/solutions/blog/app/blog/utils.ts)</span>
+2. 图片渲染通过NextJs自带的\<Image\>组件完成，\<Image\>组件相对于HTML原生的\<img\>自带了针对图像的优化，如lazy loading、自定义loader等等。
+#### 图床
+为了当前快速上线网站，于是选择了免费且最容易的图床解决方案：另开一个GH仓库作为图床，使用图床工具如<span className="font-bold text-emerald-500 dark:text-pink-500">[picx](https://github.com/XPoet/picx)</span>上传到库，通过JsDelivr这样的CDN加速。
+Picx是一款基于GitHub API开发的图床工具，有简单易懂的教程，非常非常非常推荐。
+
+未来的目标是把资源转移到如Amazon S3上，这样更加现代化。（个人感觉也更实用）。
+
+## 设计
+通过编写TailwindCSS来实现个人审美的设计。例子：现代设备基本都有黑夜和白天模式，我希望我的网页是可以根据设备的模式自动切换效果的，Tailwindcss中的dark：就很好的实现了这一点
+我可以通过注明dark：时的样式来完成对黑夜模式浏览器的样式设计。
+
+还有值得一提的就是使用ChatGPT，有时候当有了一个思路但是不清楚具体如何实现就可以通过AI获得实现的步骤，这比我自己去从头翻阅学习技术文档高效得多。
+
+例如我想实现移动端菜单栏的自动收起效果，由于缺乏相关经验我不知道如何下手，依照现在的相关知识我只知道要用到client mode和useState，
+于是我询问了ChatGPT 然后获得了实现的步骤，虽然答案和我的实际应用并不相同，但是这也让我在短时间内完成了功能的实现。
+
+## 后续工作
+#### 优化
+NextJs本身就提供了很多针对网页的优化，如前文提到的\<Image\>组件，亦或是\<Link\>组件可以把站内页面预加载，这样点击链接几乎秒开；
+但是也有很多需要手动优化的空间，尤其是针对图像的优化。
+
+在优化之前，我先了解了一下Google Lighthouse里的各项指标(Web Vitals)：
+1. First Contentful Paint (FCP): 页面上的第一个文本或图像内容出现在屏幕上的时间。
+2. Largest Contentful Paint (LCP): 页面在可视区域内加载的最大文本块或图像的时间。
+3. Time to Interactive (TTI): 页面完全加载且能够快速响应用户输入的时间。
+4. Total Blocking Time (TBT): 从FCP到TTI之间，所有长任务（超过50毫秒）的阻塞时间总和。
+5. Cumulative Layout Shift (CLS): 页面视觉稳定性。如果页面元素在加载过程中频繁移动，用户体验会受到影响。较低的CLS值表示页面布局更加稳定，不会给用户带来不良体验。
+
+由于NextJS在服务端完成了对React的首次渲染，所以主要优化时FCP和LCP。
+
+目前的问题存在与图片是通过url的方式到\<Image\>组件上的，所以正在寻找一种能让\<Image\>对remote src有getStaticprops行为的方式（施工中）。
+
+#### 更换CMS
+一直使用Github Page也不是不行，但是为了城市化和更多的了解AWS生态，可以把CMS换成AWS下的产品。

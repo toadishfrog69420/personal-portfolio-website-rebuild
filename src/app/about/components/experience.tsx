@@ -35,7 +35,7 @@ export function Experience() {
             return {
                 title: year,
                 content: (
-                    <div className='flex flex-col gap-4'>
+                    <div className='flex flex-col gap-4' key={year}>
                         {experiencesByYear[year].map((exp, index) => (
                             <div key={index} className='flex flex-col gap-2'>
                                 <h3 className='text-xl font-bold'>{exp.title}</h3>
