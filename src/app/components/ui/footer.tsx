@@ -25,7 +25,7 @@ export default function Footer() {
           >
             <Icon_ArrowIcon />
             <Icon_GithubIcon />
-            <p className="ml-2 h-7">github</p>
+            <p className="ml-2 h-7">Github</p>
           </a>
         </li>
       </ul>

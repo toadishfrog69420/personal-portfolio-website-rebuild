@@ -21,6 +21,7 @@ export function Education() {
     const educationData = (education as Education[]).map((edu, index) => (
         <CardSpotlight
             key={index}
+            radius={500}
         >
 
             <div className='lg:w-1/2 w-full p-4 flex flex-col justify-between'>

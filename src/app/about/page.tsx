@@ -1,7 +1,7 @@
 import { Summary } from "@/app/about/components/summary";
 import { Education } from "@/app/about/components/education";
 import { Experience } from "@/app/about/components/experience";
-import { Skill } from "./components/skills";
+import { ShowCase } from "./components/show-case";
 
 
 export default function Page() {
@@ -19,7 +19,7 @@ export default function Page() {
                     <Experience />
                 </div>
                 <div className={`my-8 flex justifiy-center flex-col`}>
-                    <Skill />
+                    <ShowCase />
                 </div>
             </section>
 

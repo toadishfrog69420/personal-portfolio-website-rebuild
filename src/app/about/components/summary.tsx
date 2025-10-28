@@ -27,6 +27,10 @@ export function Summary() {
                 />
             </div>
 
+            <div className={`component-section-header`}>
+                Summary
+            </div>
+
             {/* Summary */}
             <div className="mb-4">
                 <p className="text-base md:text-lg lg:text-xl xl:text-2xl">

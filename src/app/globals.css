@@ -34,9 +34,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  margin-top: 1.25em;
-  margin-bottom: 1.25em;
 }
+
 
 /* Universal CSS - Custom definition */
 .component-section {
@@ -52,11 +51,27 @@ body {
 }
 
 .component-page-header {
-  @apply font-semibold text-2xl mb-8 mt-20 tracking-tighter 
-  bg-gradient-to-b text-transparent bg-clip-text 
-  from-zinc-900 via-zinc-800 to-stone-500
-  dark:from-zinc-300 dark:via-zinc-200 dark:to-stone-500
+  @apply font-semibold text-2xl mb-8 mt-20 tracking-tighter bg-gradient-to-b text-transparent bg-clip-text from-zinc-900 via-zinc-800 to-stone-500 dark:from-zinc-300 dark:via-zinc-200 dark:to-stone-500
 }
+
+
+/* Landing Page Styles - Custom definition */
+.home-div {
+  @apply flex flex-col items-center w-screen h-screen justify-center overflow-hidden
+}
+
+.home-msg {
+  @apply font-serif text-center font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-stone-800 dark:text-stone-300 mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-16 leading-tight
+}
+
+.home-separator {
+  @apply hidden w-screen h-px md:block bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0
+}
+
+.home-navi-list {
+  @apply flex items-center justify-center gap-4 font-medium bg-gradient-to-tr text-transparent bg-clip-text from-zinc-800 via-zinc-600 to-stone-600 dark:from-zinc-400 dark:via-zinc-100 dark:to-stone-300
+}
+
 
 /* Blog Styles - Custom definition */
 .blog-section {
@@ -74,7 +89,8 @@ body {
 .blog-date-div {
   @apply flex justify-between items-center mt-2 mb-8 text-sm
 }
-.blog-date-p{
+
+.blog-date-p {
   @apply text-sm text-neutral-600 dark:text-neutral-400
 }
 
@@ -88,8 +104,7 @@ body {
 
 /*  Blog Post Page Styles - Custom definition */
 .blog-post-card-container {
-  @apply bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden w-full 
-            transition ease-in-out delay-10 hover:-translate-y-1 hover:scale-101 duration-300
+  @apply bg-white dark:bg-neutral-800 rounded-lg shadow-md overflow-hidden w-full transition ease-in-out delay-10 hover:-translate-y-1 hover:scale-101 duration-300
 }
 
 .blog-post-card-date-p {

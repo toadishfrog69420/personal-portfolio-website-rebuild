@@ -2,7 +2,7 @@ import skill from "@/app/data/skill-stack.json"
 import { InfiniteMovingCards } from "@/app/components/ui/infinite-moving-cards"
 import { TransitionSection } from "@/app/components/ui/transition-section";
 
-export function Skill() {
+export function ShowCase() {
 
     const skills = skill.map(s => ({
         "quote": "",
@@ -13,7 +13,7 @@ export function Skill() {
     return (
         <TransitionSection>
             <h1 className='component-section-header'>
-                Skills
+                Show Case
             </h1>
 
             <InfiniteMovingCards
