@@ -1,16 +1,17 @@
 'use client'
-import aboutMe from "@/app/data/about-me.json"
+import Icons from "@/app/data/icon-slugs.json"
 import { PixelatedCanvas } from "@/app/components/ui/pixelated-canvas"
 import { TransitionSection } from "@/app/components/ui/transition-section";
+import { BentoCard, BentoGrid } from "@/app/components/ui/bento-grid";
 
 interface Summary {
-    en: string;
+    
 }
 
 export function Summary() {
 
-    const summary: Summary[] = aboutMe;
-
+    const icons = Icons;
+    const features = [{Icon:"1"},{Icon:"2"}];
 
     return (
         <TransitionSection>
@@ -30,13 +31,14 @@ export function Summary() {
             <div className={`component-section-header`}>
                 Summary
             </div>
+            
+            <BentoGrid>
+                {features.map((feature, idx) => (
+                    <BentoCard key={idx} {...feature} />
+                ))}
+            
+            </BentoGrid>
 
-            {/* Summary */}
-            <div className="mb-4">
-                <p className="text-base md:text-lg lg:text-xl xl:text-2xl">
-                    {summary[0].en}
-                </p>
-            </div>
         </TransitionSection>
     )
 }

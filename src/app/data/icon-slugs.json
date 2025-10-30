@@ -1,0 +1,48 @@
+[
+    {
+        "planguage":[
+            "python",
+            "r",
+            "typescript",
+            "javascript",
+            "googleappsscript",
+            "html5"
+        ],
+
+        "framework":[
+            "nextdotjs",
+            "vercel",
+            "react",
+            "streamlit"
+        ],
+
+        "devtool":[
+            "nodedotjs",
+            "npm",
+            "git",
+            "docker",
+            "github",
+            "gitlab"
+        ],
+
+        "software":[
+            "zendesk"
+        ],
+    
+        "data": [
+            "snowflake",
+            "mysql",
+            "r",
+            "jupyter",
+            "numpy",
+            "pandas",
+            "scikitlearn",
+            "streamlit",
+            "looker"
+        ]
+        
+        
+
+    }
+    
+]
